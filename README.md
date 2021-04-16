@@ -1,1 +1,1 @@
-# ngt_hucuthon_2021
+# This is NGT's git repository for Hucuthon 2021
