@@ -1,6 +1,10 @@
 const fs = require('fs');
 const readline = require('readline');
 const { google } = require('googleapis');
+let dir = './datafromclassroom';
+if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+}
 const myConsole = new console.Console(fs.createWriteStream('./datafromclassroom/results.json'));
 const WORKFOLDER = 'classroomapi/'
 // If modifying these scopes, delete token.json.
@@ -8,10 +12,10 @@ const SCOPES = ['https://www.googleapis.com/auth/classroom.rosters https://www.g
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
-const TOKEN_PATH = WORKFOLDER+'token.json';
+const TOKEN_PATH = WORKFOLDER + 'token.json';
 
 // Load client secrets from a local file.
-fs.readFile(WORKFOLDER+'credentials.json', (err, content) => {
+fs.readFile(WORKFOLDER + 'credentials.json', (err, content) => {
     if (err) return console.log('Error loading client secret file:', err);
     // Authorize a client with credentials, then call the Google Classroom API.
     authorize(JSON.parse(content), listCourses);
@@ -93,7 +97,7 @@ function listCourses(auth) {
                     res.data.students.forEach((user) => { user_names.push({ "userId": user.userId, "fullName": user.profile.name.fullName }) });
                     classroom.courses.courseWork.list({ "courseId": course_id }, (err, res) => {
                         res.data.courseWork.forEach((task) => { assignment_names.push({ "assignmentId": task.id, "title": task.title }) });
-                        grades.forEach((el) => { extract.push({"assignmentName": assignment_names.find(element => element["assignmentId"] == el.assignmentId).title , "studentName": user_names.find(element => element["userId"] == el.userId).fullName , "studentGrade": el.grade}) });
+                        grades.forEach((el) => { extract.push({ "assignmentName": assignment_names.find(element => element["assignmentId"] == el.assignmentId).title, "studentName": user_names.find(element => element["userId"] == el.userId).fullName, "studentGrade": el.grade }) });
                         myConsole.log(JSON.stringify(extract));
                     });
                 });
