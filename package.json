@@ -27,6 +27,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-firebase-middleware": "^3.0.0",
-    "firebase-admin": "^8.13.0"
+    "firebase-admin": "^8.13.0",
+    "googleapis": "^39.2.0"
   }
 }

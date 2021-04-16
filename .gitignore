@@ -1,3 +1,5 @@
 .vscode
 node_modules
 learningpet-h2021-firebase-adminsdk-plryd-150949f3c1.json
+classroomapi/*.json
+datafromclassroom/*
