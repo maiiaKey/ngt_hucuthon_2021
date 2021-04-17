@@ -107,7 +107,7 @@ const handleGetTotalMarks = (db) => (req, res) => {
                 })
                 setTimeout(function () {
                     res.json(sum)
-                }, 4000)
+                }, 10000)
             }
             else {
                 res.status(400).json('User with such id not found')

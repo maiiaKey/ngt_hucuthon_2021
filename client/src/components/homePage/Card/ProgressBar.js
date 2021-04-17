@@ -15,5 +15,5 @@ function LinearProgressWithLabel({ value }) {
 }
 
 export default function LinearWithValueLabel({ value }) {
-  return <LinearProgressWithLabel value={51} />;
+  return <LinearProgressWithLabel value={value} />;
 }
