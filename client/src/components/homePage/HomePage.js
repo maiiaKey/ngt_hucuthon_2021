@@ -6,14 +6,14 @@ import "./HomePage.css";
 
 const HomePage = () => {
   const history = useHistory();
-
+/*
   useEffect(() => {
     console.log(localStorage.getItem("userId"));
     if (!localStorage.getItem("userId")) {
       history.push("/login");
     }
   }, [history]);
-
+*/
   return (
     <>
       <div className="page">
