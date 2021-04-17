@@ -10,12 +10,11 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 const db = knex({
     client: 'pg',
     connection: {
-      // connectionString : process.env.DATABASE_URL, // this is for production
-      // ssl: true // this is for production
-      host: 'localhost',
-      user: 'postgres',
-      password: 'app64data',
-      database: 'learningpet'
+      host: 'ec2-34-225-167-77.compute-1.amazonaws.com',
+      user: 'fptyrwvjazvwvl',
+      password: '20c8d78ee96a678dc60bc65d1af4341e0ab15765e89ce96b49caf412a9b705e4',
+      database: 'd2cjfkmuoi4uma',
+      ssl: true
     }
 });
 
