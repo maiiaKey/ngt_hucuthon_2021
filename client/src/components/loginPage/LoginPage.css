@@ -1,0 +1,45 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: unset !important;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notLoading {
+  padding-top: 16px;
+}
+
+.MuiLinearProgress-root {
+  width: 100%;
+}
+
+.login-wrapper {
+  margin-bottom: 16px;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiSvgIcon-root {
+  padding-bottom: 8px;
+}
+
+.MuiTypography-h4 {
+  padding-bottom: 16px;
+}
+
+.MuiTextField-root {
+  padding-bottom: 32px !important;
+}
