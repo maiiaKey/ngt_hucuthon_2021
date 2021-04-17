@@ -11,17 +11,28 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import ProgressBar from "./ProgressBar";
 import level_1_base from "./gifs/level_1_base.gif";
+import level_2_base from "./gifs/level_2_base.gif";
 
 const resolveLevelFromMarks = (totalMarks) => {
-
+    return Math.floor(Math.sqrt(totalMarks/100))+1
 }
 
 const resolveProgressFromMarks = (totalMarks) => {
     
 }
 
-const resolveBaseGifFromLevel = (totalMarks) => {
-    return level_1_base;
+const resolveBaseGifFromLevel = (level) => {
+
+    switch(level){
+        case 1:
+            return level_1_base;
+            break;
+        case 2:
+            return level_2_base;
+            break;
+        default:
+            return level_2_base;
+    }
 }
 
 const resolveLevelUpGifFromLevel = (totalMarks) => {
@@ -54,7 +65,8 @@ export default function MediaCard() {
     const userId = localStorage.getItem("userId");
     if (userId) {
       // fetch totalMarks from backend: url/marks/userId/total (use .then!!!)
-      setTotalMarks(100);
+      
+      setTotalMarks(500);
     }
   }, []);
 
