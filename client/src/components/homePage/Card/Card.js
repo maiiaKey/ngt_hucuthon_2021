@@ -9,35 +9,30 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import ProgressBar from "./ProgressBar";
+import LinearWithValueLabel from "./ProgressBar";
 import level_1_base from "./gifs/level_1_base.gif";
 import level_2_base from "./gifs/level_2_base.gif";
 
 const resolveLevelFromMarks = (totalMarks) => {
-    return Math.floor(Math.sqrt(totalMarks/100))+1
-}
+  return Math.floor(Math.sqrt(totalMarks / 100)) + 1;
+};
 
-const resolveProgressFromMarks = (totalMarks) => {
-    
-}
+const resolveProgressFromMarks = (totalMarks) => {};
 
 const resolveBaseGifFromLevel = (level) => {
+  switch (level) {
+    case 1:
+      return level_1_base;
+      break;
+    case 2:
+      return level_2_base;
+      break;
+    default:
+      return level_2_base;
+  }
+};
 
-    switch(level){
-        case 1:
-            return level_1_base;
-            break;
-        case 2:
-            return level_2_base;
-            break;
-        default:
-            return level_2_base;
-    }
-}
-
-const resolveLevelUpGifFromLevel = (totalMarks) => {
-    
-}
+const resolveLevelUpGifFromLevel = (totalMarks) => {};
 
 const MediaStyle = makeStyles({
   root: {
@@ -65,7 +60,7 @@ export default function MediaCard() {
     const userId = localStorage.getItem("userId");
     if (userId) {
       // fetch totalMarks from backend: url/marks/userId/total (use .then!!!)
-      
+
       setTotalMarks(500);
     }
   }, []);
@@ -87,14 +82,12 @@ export default function MediaCard() {
         <CardMedia className={classes.media} image={pet.baseGif} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Пират
+            Pirat
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Че-то там
-          </Typography>
-          <ProgressBar />
-        {/* Preview */}
-        {/* LevelUp button */}
+
+          <LinearWithValueLabel />
+          {/* Preview */}
+          {/* LevelUp button */}
         </CardContent>
       </CardActionArea>
     </Card>

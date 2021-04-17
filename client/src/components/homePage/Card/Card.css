@@ -1,8 +1,39 @@
 .card {
-    width: 100%;
-    height: calc(100% - 130px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
+  width: 100%;
+  height: calc(100% - 130px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiBox-root {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressWrapper {
+  flex-direction: row;
+}
+
+.progressPercent {
+  padding-right: 8px;
+}
+
+.progressBar {
+  height: 16px !important;
+  border-radius: 8px;
+}
+
+.MuiLinearProgress-barColorPrimary {
+  background: linear-gradient(to right, #3f51b5, #F2709C);
+}
