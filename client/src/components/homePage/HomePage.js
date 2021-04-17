@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import ParticlesBg from "particles-bg";
+import MediaCard from "./Card/Card";
 import "./HomePage.css";
 
-import Card from "./Card/Card"
-
-const LoginPage = () => {
+const HomePage = () => {
   const history = useHistory();
 
   useEffect(() => {
@@ -18,11 +17,11 @@ const LoginPage = () => {
   return (
     <>
       <div className="page">
-        <Card />
+        <MediaCard />
+        <ParticlesBg type="color" bg={true} />
       </div>
-      <ParticlesBg type="color" bg={true} />
     </>
   );
 };
 
-export default LoginPage;
+export default HomePage;

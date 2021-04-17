@@ -5,7 +5,7 @@
 }
 
 .login-card {
-  background: unset !important;
+  border-radius: 20px !important;
   width: 350px;
   height: 350px;
   display: flex;

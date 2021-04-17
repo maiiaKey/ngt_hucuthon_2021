@@ -8,8 +8,6 @@ import {
 import HomePage from "./components/homePage/HomePage";
 import LoginPage from "./components/loginPage/LoginPage";
 
-import Card from "./components/homePage/Card/Card"
-
 function App() {
   return (
     <>
@@ -20,7 +18,6 @@ function App() {
           <Redirect from="/" to="home" />
         </Switch>
       </Router>
-      <Card />
     </>
   );
 }
