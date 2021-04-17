@@ -13,12 +13,15 @@ import level_2_base from "./gifs/Parrot_2.gif";
 import level_3_base from "./gifs/Parrot_3.gif";
 
 const resolveLevelFromMarks = (totalMarks) => {
-  console.log(totalMarks);
-  return Math.floor(Math.sqrt(totalMarks / 100));
+  const newLevel = Math.floor(totalMarks / 100);
+  console.log("New level", newLevel);
+  return newLevel;
 };
 
 const resolveProgressFromMarks = (totalMarks, newLevel) => {
-  return 100*(totalMarks/(200*newLevel-100));
+  const percent = totalMarks%100;
+  console.log("Percent", percent);
+  return percent;
 }
 
 const resolveBaseGifFromLevel = (level) => {
