@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { Card, TextField } from "@material-ui/core";
 import ParticlesBg from "particles-bg";
 import "./HomePage.css";
+
+import Card from "./Card/Card"
 
 const LoginPage = () => {
   const history = useHistory();
@@ -17,15 +18,7 @@ const LoginPage = () => {
   return (
     <>
       <div className="page">
-        <Card className="home-page-card">
-          <TextField
-            fullWidth
-            id="input email"
-            label="Pet name"
-            variant="outlined"
-            type="text"
-          />
-        </Card>
+        <Card />
       </div>
       <ParticlesBg type="color" bg={true} />
     </>
