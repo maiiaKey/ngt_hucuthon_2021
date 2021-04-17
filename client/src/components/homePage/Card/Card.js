@@ -11,6 +11,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import logo from './Parrot.gif';
 
+import ProgressBar from "./ProgressBar"
+
 const MediaStyle = makeStyles({
     root: {
       maxWidth: 300,
@@ -39,10 +41,9 @@ export default function MediaCard() {
                 </Typography>
             </CardContent>
             </CardActionArea>
+            <ProgressBar />
             <CardActions>
-                <Button size="small" color="primary">
-                    Кнопочка
-                </Button>
+  
             </CardActions>
         </Card>
     );
